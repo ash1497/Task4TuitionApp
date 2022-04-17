@@ -7,9 +7,9 @@ import {
 
 const Location = () => {
     return (
-        <view>
-            <text>Location</text>
-        </view>
+        <View>
+            <Text>Location</Text>
+        </View>
     )
 }
 

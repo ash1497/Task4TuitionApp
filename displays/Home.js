@@ -7,9 +7,9 @@ import {
 
 const Home = () => {
     return (
-        <view>
-            <text>Home</text>
-        </view>
+        <View>
+            <Text>Home</Text>
+        </View>
     )
 }
 

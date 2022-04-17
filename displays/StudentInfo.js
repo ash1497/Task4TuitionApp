@@ -7,9 +7,9 @@ import {
 
 const StudentInfo = () => {
     return (
-        <view>
-            <text>Studentinfo</text>
-        </view>
+        <View>
+            <Text>Studentinfo</Text>
+        </View>
     )
 }
 
