@@ -124,7 +124,7 @@ const Home = () => {
               justifyContent: 'center',
               borderRadius: SIZES.radius,
             }}>
-            <Text style={{...FONTS.h2}}>PlaceHolder Location</Text>
+            <Text style={{...FONTS.h2}}>{CurrentLocation}</Text>
           </View>
         </View>
         <TouchableOpacity
