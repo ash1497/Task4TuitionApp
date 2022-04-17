@@ -1,6 +1,7 @@
 export const amex = require('../assets/icons/amex.png');
 export const back = require('../assets/icons/back.png');
 export const car = require('../assets/icons/car.png');
+export const creditcard = require('../assets/icons/creditcard.png');
 export const like = require('../assets/icons/like.png');
 export const list = require('../assets/icons/list.png');
 export const location = require('../assets/icons/location.png');
@@ -17,6 +18,7 @@ export default {
   amex,
   back,
   car,
+  creditcard,
   like,
   list,
   location,
