@@ -13,6 +13,44 @@ import {
 import {icons, images, SIZES, COLORS, FONTS} from '../constants';
 
 const Home = () => {
+
+    const CurrentLocation = {
+        streetName: "7042 Guildhall Court",
+        gps: {
+            latitude: 43.576879694930376,
+            longitude: -79.78592687986493
+        }
+    }
+
+    const taskData = [
+        {
+            id: 1,
+            name: "Lawn Mowing",
+            icon: icons.lawnmowing,
+        },
+        {
+            id: 2,
+            name: "Gardening",
+            icon: icons.gardening,
+        },
+        {
+            id: 3,
+            name: "Snow Shovelling",
+            icon: icons.snowshovel,
+        },
+        {
+            id: 4,
+            name: "Car Washing",
+            icon: icons.carwash,
+        },
+        {
+            id: 5,
+            name: "Miscellanous",
+            icon: icons.misc,
+        },
+    ]
+
+
   function renderHeader() {
     return (
       <View style={{flexDirection: 'row', height: 50}}>
@@ -69,7 +107,15 @@ const Home = () => {
     );
   }
 
-  return <SafeAreaView style={styles.container}>{renderHeader()}</SafeAreaView>;
+  return (
+
+    <SafeAreaView style={styles.container}>
+
+        {renderHeader()}
+
+
+    </SafeAreaView>
+    )
 };
 
 const styles = StyleSheet.create({
