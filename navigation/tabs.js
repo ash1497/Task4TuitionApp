@@ -10,11 +10,16 @@ import {COLORS, icons} from '../constants';
 const Tab = createBottomTabNavigator();
 const Tabs = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarShowLabel: false,
+        headerShown: false,
+      }}>
       <Tab.Screen
         name="Favorite"
         component={Home}
         options={{
+          header: () => null,
           tabBarIcon: ({focused}) => (
             <Image
               source={icons.star}
@@ -32,6 +37,7 @@ const Tabs = () => {
         name="Search"
         component={Home}
         options={{
+          header: () => null,
           tabBarIcon: ({focused}) => (
             <Image
               source={icons.search}
@@ -49,6 +55,7 @@ const Tabs = () => {
         name="User"
         component={Home}
         options={{
+          header: () => null,
           tabBarIcon: ({focused}) => (
             <Image
               source={icons.user}
