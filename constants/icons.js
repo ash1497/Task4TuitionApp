@@ -8,6 +8,7 @@ export const mastercard = require('../assets/icons/mastercard.png');
 export const nearby = require('../assets/icons/nearby.png');
 export const pin = require('../assets/icons/pin.png');
 export const search = require('../assets/icons/search.png');
+export const shoppingcart = require('../assets/icons/shoppingcart.png');
 export const star = require('../assets/icons/star.png');
 export const user = require('../assets/icons/user.png');
 export const visa = require('../assets/icons/visa.png');
@@ -23,6 +24,7 @@ export default {
   nearby,
   pin,
   search,
+  shoppingcart,
   star,
   user,
   visa,

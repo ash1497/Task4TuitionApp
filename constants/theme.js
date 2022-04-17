@@ -9,6 +9,7 @@ export const COLORS = {
   // colors
   black: '#000000',
   white: '#FFFFFF',
+  lightGray: "#EFEFF1",
 
   transparent: 'transparent',
   darkgray: '#898C95',
@@ -24,9 +25,9 @@ export const SIZES = {
   padding3: 16,
 
   // font sizes
-  title: 45,
-  h1: 35,
-  h2: 25,
+  title: 35,
+  h1: 25,
+  h2: 15,
   body1: 30,
   body2: 20,
 
@@ -41,8 +42,8 @@ export const FONTS = {
     fontSize: SIZES.title,
     lineHeight: 45,
   },
-  h1: {fontFamily: 'Roboto-Black', fontSize: SIZES.h1, lineHeight: 35},
-  h2: {fontFamily: 'Roboto-Black', fontSize: SIZES.h2, lineHeight: 25},
+  h1: {fontFamily: 'Roboto-Black', fontSize: SIZES.h1, lineHeight: 25},
+  h2: {fontFamily: 'Roboto-Black', fontSize: SIZES.h2, lineHeight: 15},
   body1: {fontFamily: 'Roboto-Black', fontSize: SIZES.body1, lineHeight: 35},
   body2: {fontFamily: 'Roboto-Black', fontSize: SIZES.body2, lineHeight: 25},
 };
