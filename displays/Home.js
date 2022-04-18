@@ -90,6 +90,11 @@ const Home = () => {
     },
   ];
 
+  const [categories, setCategories] = React.useState(taskData);
+  const [selectedCategory, setSelectedCategory] = React.useState(null);
+  //const [restaurants, setRestaurants] = React.useState(restaurantData)
+  //const [currentLocation, setCurrentLocation] = React.useState(initialCurrentLocation)
+
   function renderHeader() {
     return (
       <View style={{flexDirection: 'row', height: 50}}>
@@ -124,7 +129,7 @@ const Home = () => {
               justifyContent: 'center',
               borderRadius: SIZES.radius,
             }}>
-            <Text style={{...FONTS.h2}}>{CurrentLocation}</Text>
+            <Text style={{...FONTS.h2}}>{CurrentLocation.streetName}</Text>
           </View>
         </View>
         <TouchableOpacity
@@ -145,8 +150,70 @@ const Home = () => {
       </View>
     );
   }
+  function renderMainCategories() {
+    const renderItem = ({item}) => {
+      return (
+        <TouchableOpacity
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: COLORS.primary,
+            padding: 12,
+            borderRadius: 5,
+            borderStyle: 'solid',
+            borderColor: 'yellow',
+            margin: 20,
+          }}>
+          <View
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 60,
+              height: 60,
+              borderRadius: 5,
+              backgroundColor: 'lightyellow',
+            }}>
+            <Image
+              source={item.icon}
+              resizeMode="contain"
+              style={{
+                width: 30,
+                height: 30,
+              }}
+            />
+          </View>
+        </TouchableOpacity>
+      );
+    };
+    return (
+      <View style={{padding: SIZES.padding3}}>
+        <Text
+          style={{
+            textAlign: 'center',
+            ...FONTS.h1,
+            fontWeight: 'bold',
+            color: COLORS.primary,
+            padding: SIZES.padding,
+          }}>
+          CHOOSE BY TASK
+        </Text>
+        <FlatList
+          data={categories}
+          horizontal
+          keyExtractor={item => `${item.id}`}
+          renderItem={renderItem}
+          contentContainerStyle={{padding: 15}}
+        />
+      </View>
+    );
+  }
 
-  return <SafeAreaView style={styles.container}>{renderHeader()}</SafeAreaView>;
+  return (
+    <SafeAreaView style={styles.container}>
+      {renderHeader()}
+      {renderMainCategories()}
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({
