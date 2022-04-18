@@ -22,7 +22,7 @@ const Tabs = () => {
           header: () => null,
           tabBarIcon: ({focused}) => (
             <Image
-              source={icons.star}
+              source={icons.pin}
               resizeMode="contain"
               style={{
                 width: 30,

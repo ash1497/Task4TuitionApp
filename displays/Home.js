@@ -12,7 +12,7 @@ import {
 
 import {icons, images, SIZES, COLORS, FONTS} from '../constants';
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const CurrentLocation = {
     streetName: '7042 Guildhall Court',
     gps: {
@@ -24,27 +24,32 @@ const Home = () => {
   const taskData = [
     {
       id: 1,
-      name: 'lawn',
+      name: 'Lawn-Mowing',
+        short: 'Lawn',
       icon: icons.lawnmowing,
     },
     {
       id: 2,
-      name: 'garden',
+      name: 'Gardening',
+        short: 'Garden',
       icon: icons.gardening,
     },
     {
       id: 3,
-      name: 'snow',
+      name: 'Snow Shovelling',
+        short: 'Snow',
       icon: icons.snowshovel,
     },
     {
       id: 4,
-      name: 'car',
+      name: 'Car Washing',
+        short: 'Car',
       icon: icons.carwash,
     },
     {
       id: 5,
-      name: 'misc.',
+      name: 'Miscellaneous',
+        short: 'Misc.',
       icon: icons.misc,
     },
   ];
@@ -53,9 +58,8 @@ const Home = () => {
     {
       id: 1,
       name: 'Zahaak Khan',
-      rating: 4.8,
+        reliability: 4.8,
       categories: [1, 4],
-      price: 25,
       photo: images.avatar3,
       availability: '2:00 PM - 8:00 PM',
       location: {
@@ -88,9 +92,8 @@ const Home = () => {
     {
       id: 2,
       name: 'Aashir Hussain',
-      rating: 4.9,
+        reliability: 4.9,
       categories: [2,3],
-      price: 30,
       photo: images.avatar3,
       availability: '11:00 AM - 4:00 PM',
       location: {
@@ -123,9 +126,8 @@ const Home = () => {
     {
       id: 3,
       name: 'Olivia Miller',
-      rating: 4.4,
+        reliability: 4.4,
       categories: [2],
-      price: 35,
       photo: images.avatar3,
       availability: '8:00 AM - 1:00 PM',
       location: {
@@ -151,9 +153,8 @@ const Home = () => {
     {
       id: 4,
       name: 'Adam Miller',
-      rating: 4.1,
-      categories: [3,5],
-      price: 20,
+      reliability: 4.1,
+      categories: [4,5],
       photo: images.timmy,
       availability: '11:00 AM - 4:00 PM',
       location: {
@@ -188,7 +189,17 @@ const Home = () => {
   const [categories, setCategories] = React.useState(taskData);
   const [selectedCategory, setSelectedCategory] = React.useState(null);
   const [students, setStudents] = React.useState(studentData);
-  //const [currentLocation, setCurrentLocation] = React.useState(initialCurrentLocation)
+  const [currentLocation, setCurrentLocation] = React.useState(CurrentLocation)
+
+    function getTaskNameById(id) {
+        let task = categories.filter(a => a.id == id)
+
+        if(task.length > 0)
+            return task[0].name
+
+        return ""
+
+    }
 
   function onSelectCategory(category) {
     //filter the students to the job
@@ -294,7 +305,7 @@ const Home = () => {
                 selectedCategory?.id == item.id ? COLORS.white : COLORS.black,
               ...FONTS.body5,
             }}>
-            {item.name}
+            {item.short}
           </Text>
         </TouchableOpacity>
       );
@@ -327,9 +338,12 @@ const Home = () => {
       const renderItem = ({item}) => (
           <TouchableOpacity
             style={{marginBottom: 20 }}
+            onPress={() => navigation.navigate("StudentInfo",{
+                item,
+                currentLocation
+            })}
           >
-
-              <View>
+              <View style={{marginBottom: 10}}>
                   <Image source={item.photo}
                          resizeMode="cover"
                          style={{
@@ -338,7 +352,6 @@ const Home = () => {
                              borderRadius: 10
                          }}
                   ></Image>
-
                   <View
                       style={{
                           position: 'absolute',
@@ -356,8 +369,31 @@ const Home = () => {
                       <Text style={{fontWeight: "bold", fontSize: 15}}>
                           {item.availability}
                       </Text>
-
                   </View>
+              </View>
+
+              <Text style={{fontSize: 20, fontWeight:"500" }}>{item.name}</Text>
+
+              <View style={{
+                  marginTop: 10,
+                  flexDirection: 'row'
+              }}>
+                  <Image source={icons.thumbsup} style={{height:18, width: 18, marginRight:10}}></Image>
+                  <Text style={{fontWeight:'bold'}}>{item.reliability}</Text>
+
+                  <View style={{flexDirection: 'row',marginLeft:10}}>
+                      {
+                          item.categories.map((taskID)=>{
+                              return(
+                                  <View style={{flexDirection:'row',}} key={taskID}>
+                                        <Text style={{fontWeight:'bold'}}>{getTaskNameById(taskID)}</Text>
+                                        <Text> . </Text>
+                                  </View>
+                              )
+                          })
+                      }
+                  </View>
+
               </View>
 
           </TouchableOpacity>
