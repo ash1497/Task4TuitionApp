@@ -152,9 +152,9 @@ const Home = () => {
       id: 4,
       name: 'Adam Miller',
       rating: 4.1,
-      categories: [3,4],
+      categories: [3,5],
       price: 20,
-      photo: images.avatar3,
+      photo: images.timmy,
       availability: '11:00 AM - 4:00 PM',
       location: {
         latitude: 43.5782592723825,
@@ -322,10 +322,68 @@ const Home = () => {
     );
   }
 
+    function renderStudentList(){
+
+      const renderItem = ({item}) => (
+          <TouchableOpacity
+            style={{marginBottom: 20 }}
+          >
+
+              <View>
+                  <Image source={item.photo}
+                         resizeMode="cover"
+                         style={{
+                             width: "100%",
+                             height: 180,
+                             borderRadius: 10
+                         }}
+                  ></Image>
+
+                  <View
+                      style={{
+                          position: 'absolute',
+                          bottom: 0,
+                          height : 50,
+                          left: '45%',
+                          width: SIZES.width*0.5,
+                          backgroundColor: COLORS.lightGray,
+                          borderTopLeftRadius : 10,
+                          borderBottomRightRadius: 10,
+                          alignItems:'center',
+                          justifyContent: 'center'
+                  }}
+                  >
+                      <Text style={{fontWeight: "bold", fontSize: 15}}>
+                          {item.availability}
+                      </Text>
+
+                  </View>
+              </View>
+
+          </TouchableOpacity>
+
+      )
+
+      return (
+          <FlatList
+              data={students}
+              keyExtractor={item => `${item.id}`}
+              renderItem ={renderItem}
+              contentContainerStyle={{
+                  paddingHorizontal: 20
+              }
+              }
+          />
+      )
+    }
+
+
   return (
     <SafeAreaView style={styles.container}>
       {renderHeader()}
       {renderMainCategories()}
+        {renderStudentList()}
+
     </SafeAreaView>
   );
 };

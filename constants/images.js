@@ -10,6 +10,7 @@ export const gardening = require('../assets/images/gardening.jpg');
 export const lawnmow = require('../assets/images/lawnmow.jpg');
 export const misc = require('../assets/images/miscwork.png');
 export const snowshovel = require('../assets/images/snowshoveling.jpg');
+export const timmy = require('../assets/images/timmy.jpg');
 
 
 export default {
@@ -24,5 +25,6 @@ export default {
   gardening,
   lawnmow,
   misc,
-  snowshovel
+  snowshovel,
+  timmy
 };

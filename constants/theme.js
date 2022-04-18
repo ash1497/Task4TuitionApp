@@ -43,7 +43,7 @@ export const FONTS = {
     lineHeight: 45,
   },
   h1: {fontFamily: 'Roboto-Black', fontSize: SIZES.h1, lineHeight: 25},
-  h2: {fontFamily: 'Roboto-Black', fontSize: SIZES.h2, lineHeight: 15},
+  h2: {fontFamily: 'Roboto-Bold', fontSize: SIZES.h2, lineHeight: 15},
   body1: {fontFamily: 'Roboto-Black', fontSize: SIZES.body1, lineHeight: 35},
   body2: {fontFamily: 'Roboto-Black', fontSize: SIZES.body2, lineHeight: 25},
 };
