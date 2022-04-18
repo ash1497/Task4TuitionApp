@@ -188,7 +188,7 @@ const Home = () => {
   const [categories, setCategories] = React.useState(taskData);
   const [selectedCategory, setSelectedCategory] = React.useState(null);
   const [students, setStudents] = React.useState(studentData);
-  //const [currentLocation, setCurrentLocation] = React.useState(initialCurrentLocation)
+  const [currentLocation, setCurrentLocation] = React.useState(initialCurrentLocation)
 
   function onSelectCategory(category) {
     //filter the students to the job
