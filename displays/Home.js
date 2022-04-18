@@ -55,22 +55,18 @@ const Home = () => {
       name: 'Zahaak Khan',
       rating: 4.8,
       categories: [1, 4],
-      //priceRating: affordable,
       price: 25,
-      photo: images.timmy,
-      //duration: '30 - 45 min',
+      photo: images.avatar3,
       availability: '2:00 PM - 8:00 PM',
       location: {
-        // latitude: 1.5347282806345879,
-        //longitude: 110.35632207358996,
         latitude: 43.394876,
         longitude: -79.894195,
       },
-      courier: {
-        avatar: images.avatar_1,
+      avatar: {
+        avatar: images.avatar1,
         name: 'Zahaak Khan',
       },
-      menu: [
+      task: [
         {
           taskId: 1,
           name: 'Lawn Mowing',
@@ -88,6 +84,105 @@ const Home = () => {
         },
       ],
     },
+
+    {
+      id: 2,
+      name: 'Aashir Hussain',
+      rating: 4.9,
+      categories: [2,3],
+      price: 30,
+      photo: images.avatar3,
+      availability: '11:00 AM - 4:00 PM',
+      location: {
+        latitude: 43.5782592723825,
+        longitude:  -79.73216994212102,
+      },
+      avatar: {
+        avatar: images.avatar7,
+        name: 'Aashir Hussain',
+      },
+      task: [
+        {
+          taskId: 1,
+          name: 'Gardening',
+          photo: images.gardening,
+          description:
+              'Highly Knowledgeable in plant care, 4 years of experience in home gardening.',
+          price: 30,
+        },
+        {
+          taskId: 2,
+          name: 'Snow Shovelling',
+          photo: images.snowshovel,
+          description: 'Experience with snow blower and various types of shovels, fast and clean work.',
+          price: 40,
+        },
+      ],
+    },
+
+    {
+      id: 3,
+      name: 'Olivia Miller',
+      rating: 4.4,
+      categories: [2],
+      price: 35,
+      photo: images.avatar3,
+      availability: '8:00 AM - 1:00 PM',
+      location: {
+        latitude: 43.55884361600115,
+        longitude:  -79.76512129220602,
+      },
+      avatar: {
+        avatar: images.avatar4,
+        name: 'Olivia Miller',
+      },
+      task: [
+        {
+          taskId: 1,
+          name: 'Gardening',
+          photo: images.gardening,
+          description:
+              'Parents own a plant nursery, experienced gardner.',
+          price: 35,
+        },
+      ],
+    },
+
+    {
+      id: 4,
+      name: 'Adam Miller',
+      rating: 4.1,
+      categories: [3,4],
+      price: 20,
+      photo: images.avatar3,
+      availability: '11:00 AM - 4:00 PM',
+      location: {
+        latitude: 43.5782592723825,
+        longitude:  -79.73216994212102,
+      },
+      avatar: {
+        avatar: images.avatar2,
+        name: 'Adam Miller',
+      },
+      task: [
+        {
+          taskId: 1,
+          name: 'Car Wash',
+          photo: images.carwash,
+          description:
+              'Owns a Sports car that is maintained on a weeklu basis. flawless technique.',
+          price: 120,
+        },
+        {
+          taskId: 2,
+          name: 'Miscellaneous',
+          photo: images.misc,
+          description: 'Willing to do other predefined tasks, proficient with tools.',
+          price: 80,
+        },
+      ],
+    },
+
   ];
 
   const [categories, setCategories] = React.useState(taskData);
