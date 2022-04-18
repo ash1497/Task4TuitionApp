@@ -24,27 +24,27 @@ const Home = () => {
   const taskData = [
     {
       id: 1,
-      name: 'Lawn Mowing',
+      name: 'lawn',
       icon: icons.lawnmowing,
     },
     {
       id: 2,
-      name: 'Gardening',
+      name: 'garden',
       icon: icons.gardening,
     },
     {
       id: 3,
-      name: 'Snow Shovelling',
+      name: 'snow',
       icon: icons.snowshovel,
     },
     {
       id: 4,
-      name: 'Car Washing',
+      name: 'car',
       icon: icons.carwash,
     },
     {
       id: 5,
-      name: 'Miscellanous',
+      name: 'misc.',
       icon: icons.misc,
     },
   ];
@@ -92,9 +92,18 @@ const Home = () => {
 
   const [categories, setCategories] = React.useState(taskData);
   const [selectedCategory, setSelectedCategory] = React.useState(null);
-  //const [restaurants, setRestaurants] = React.useState(restaurantData)
+  const [students, setStudents] = React.useState(studentData);
   //const [currentLocation, setCurrentLocation] = React.useState(initialCurrentLocation)
 
+  function onSelectCategory(category) {
+    //filter the students to the job
+    let studentList = studentData.filter(a =>
+      a.categories.includes(category.id),
+    );
+    setStudents(studentList);
+
+    setSelectedCategory(category);
+  }
   function renderHeader() {
     return (
       <View style={{flexDirection: 'row', height: 50}}>
@@ -163,7 +172,8 @@ const Home = () => {
             borderStyle: 'solid',
             borderColor: 'yellow',
             margin: 20,
-          }}>
+          }}
+          onPress={() => onSelectCategory(item)}>
           <View
             style={{
               alignItems: 'center',
@@ -177,11 +187,20 @@ const Home = () => {
               source={item.icon}
               resizeMode="contain"
               style={{
-                width: 30,
-                height: 30,
+                width: 60,
+                height: 60,
               }}
             />
           </View>
+          <Text
+            style={{
+              marginTop: SIZES.padding,
+              color:
+                selectedCategory?.id == item.id ? COLORS.white : COLORS.black,
+              ...FONTS.body5,
+            }}>
+            {item.name}
+          </Text>
         </TouchableOpacity>
       );
     };
