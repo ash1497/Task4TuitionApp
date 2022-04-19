@@ -77,19 +77,22 @@ const Home = ({navigation}) => {
           photo: images.lawnmow,
           description:
             'Description: Excellent technique and care. Evenly cut lawn, years of experience.',
-            desc2: 'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
-            desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
-            desc4: 'Contact (Text or Call): (905)123-4567',
+          desc2:
+            'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
+          desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
+          desc4: 'Contact (Text or Call): (905)123-4567',
           price: 25,
         },
         {
           taskId: 2,
           name: 'Car Wash',
           photo: images.carwash,
-          description: 'Description: Amazing at washing cars, tons of experience.',
-            desc2: 'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
-            desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
-            desc4: 'Contact (Text or Call): (905)123-4567',
+          description:
+            'Description: Amazing at washing cars, tons of experience.',
+          desc2:
+            'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
+          desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
+          desc4: 'Contact (Text or Call): (905)123-4567',
           price: 100,
         },
       ],
@@ -117,9 +120,10 @@ const Home = ({navigation}) => {
           photo: images.gardening,
           description:
             'Description: Highly Knowledgeable in plant care, 4 years of experience in home gardening.',
-            desc2: 'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
-            desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
-            desc4: 'Contact (Text or Call): (905)123-4567',
+          desc2:
+            'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
+          desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
+          desc4: 'Contact (Text or Call): (905)123-4567',
           price: 30,
         },
         {
@@ -128,9 +132,10 @@ const Home = ({navigation}) => {
           photo: images.snowshovel,
           description:
             'Description: Experience with snow blower and various types of shovels, fast and clean work.',
-            desc2: 'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
-            desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
-            desc4: 'Contact (Text or Call): (905)123-4567',
+          desc2:
+            'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
+          desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
+          desc4: 'Contact (Text or Call): (905)123-4567',
           price: 40,
         },
       ],
@@ -156,10 +161,12 @@ const Home = ({navigation}) => {
           taskId: 1,
           name: 'Gardening',
           photo: images.gardening,
-          description: 'Description: Parents own a plant nursery, experienced gardner feffssdfdsfdfdssffsdfds',
-            desc2: 'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
-            desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
-            desc4: 'Contact (Text or Call): (905)123-4567',
+          description:
+            'Description: Parents own a plant nursery, experienced gardner feffssdfdsfdfdssffsdfds',
+          desc2:
+            'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
+          desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
+          desc4: 'Contact (Text or Call): (905)123-4567',
           price: 35,
         },
       ],
@@ -187,9 +194,10 @@ const Home = ({navigation}) => {
           photo: images.carwash,
           description:
             'Description: Owns a Sports car that is maintained on a weekly basis. flawless technique.',
-            desc2: 'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
-            desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
-            desc4: 'Contact (Text or Call): (905)123-4567',
+          desc2:
+            'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
+          desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
+          desc4: 'Contact (Text or Call): (905)123-4567',
           price: 120,
         },
         {
@@ -198,9 +206,10 @@ const Home = ({navigation}) => {
           photo: images.misc,
           description:
             'Description: Willing to do other predefined tasks, proficient with tools.',
-            desc2: 'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
-            desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
-            desc4: 'Contact (Text or Call): (905)123-4567',
+          desc2:
+            'Education: Studying Computer Science Mobile Computing at Sheridan College. Currently Enrolled in 2nd year',
+          desc3: 'Availibility: Tuesday to Sunday from 3pm-8pm',
+          desc4: 'Contact (Text or Call): (905)123-4567',
           price: 80,
         },
       ],

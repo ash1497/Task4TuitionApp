@@ -7,6 +7,7 @@ import {
   Text,
   TouchableOpacity,
   Animated,
+  Button,
 } from 'react-native';
 //import {isIphoneX} from 'react-native-iphone-x-helper';
 import {icons, COLORS, SIZES, FONTS} from '../constants';
@@ -97,6 +98,7 @@ const StudentInfo = ({route, navigation}) => {
                 {item.name} - {item.price.toFixed(2)}
               </Text>
               <Text style={{...FONTS.body3}}>{item.description}</Text>
+
             </View>
           </View>
         ))}
@@ -104,10 +106,29 @@ const StudentInfo = ({route, navigation}) => {
     );
   }
 
+  function renderButton() {
+    return (
+      <View
+        style={{
+          paddingBottom: 20,
+          width: '50%',
+          justifyContent: 'center',
+          marginLeft: '25%',
+        }}>
+        <Button
+          //onPress={onPressLearnMore}
+          title="Book an appointment"
+          color={COLORS.primary}
+        />
+      </View>
+    );
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       {renderHeader()}
       {renderStudentInfo()}
+      {renderButton()}
     </SafeAreaView>
   );
 };
