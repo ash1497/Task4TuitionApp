@@ -60,7 +60,7 @@ const Home = ({navigation}) => {
       name: 'Zahaak Khan',
       reliability: 4.8,
       categories: [1, 4],
-      photo: images.avatar3,
+      photo: images.zahaak,
       availability: '2:00 PM - 8:00 PM',
       location: {
         latitude: 43.394876,
@@ -103,7 +103,7 @@ const Home = ({navigation}) => {
       name: 'Aashir Hussain',
       reliability: 4.9,
       categories: [2, 3],
-      photo: images.avatar3,
+      photo: images.aashir,
       availability: '11:00 AM - 4:00 PM',
       location: {
         latitude: 43.5782592723825,
@@ -146,7 +146,7 @@ const Home = ({navigation}) => {
       name: 'Olivia Miller',
       reliability: 4.4,
       categories: [2],
-      photo: images.avatar3,
+      photo: images.lisa,
       availability: '8:00 AM - 1:00 PM',
       location: {
         latitude: 43.55884361600115,
@@ -358,6 +358,7 @@ const Home = ({navigation}) => {
           keyExtractor={item => `${item.id}`}
           renderItem={renderItem}
           contentContainerStyle={{padding: 15}}
+          showsHorizontalScrollIndicator={false}
         />
       </View>
     );
@@ -456,16 +457,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.white,
-  },
-  shadow: {
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 3,
-    elevation: 1,
   },
 });
 export default Home;

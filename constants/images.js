@@ -11,7 +11,9 @@ export const lawnmow = require('../assets/images/lawnmow.jpg');
 export const misc = require('../assets/images/miscwork.png');
 export const snowshovel = require('../assets/images/snowshoveling.jpg');
 export const timmy = require('../assets/images/timmy.jpg');
-
+export const zahaak = require('../assets/images/zahaak.jpg');
+export const aashir = require('../assets/images/aashir.jpg');
+export const lisa = require('../assets/images/lisa.jpg');
 
 export default {
   avatar1,
@@ -26,5 +28,8 @@ export default {
   lawnmow,
   misc,
   snowshovel,
-  timmy
+  timmy,
+  zahaak,
+  aashir,
+  lisa,
 };

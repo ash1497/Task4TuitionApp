@@ -73,16 +73,19 @@ const StudentInfo = ({route, navigation}) => {
         horizontal
         pagingEnabled
         scrollEventThrottle={16}
-        snapToAlignment="center">
+        snapToAlignment="center"
+        showsHorizontalScrollIndicator={false}>
         {student?.task.map((item, index) => (
           <View key={`task-${index}`} style={{alignItems: 'center'}}>
-            <View style={{height: SIZES.height * 0.35}}>
+            <View style={{height: SIZES.height * 0.3}}>
               <Image
                 source={item.photo}
                 resizeMode="cover"
                 style={{
                   width: SIZES.width,
                   height: '100%',
+                  borderRadius: 30,
+                  marginTop: 10,
                 }}
               />
             </View>
@@ -90,15 +93,32 @@ const StudentInfo = ({route, navigation}) => {
               style={{
                 width: SIZES.width,
                 alignItems: 'center',
-                marginTop: 15,
+                marginTop: 20,
                 paddingHorizontal: SIZES.padding * 2,
               }}>
               <Text
-                style={{marginVertical: 10, textAlign: 'center', ...FONTS.h2}}>
-                {item.name} - {item.price.toFixed(2)}
+                style={{
+                  marginVertical: 20,
+                  textAlign: 'center',
+                  fontSize: 22,
+                  fontWeight: 'bold',
+                }}>
+                {item.name} - ${item.price.toFixed(2)}/hr
               </Text>
-              <Text style={{...FONTS.body3}}>{item.description}</Text>
-
+              <View>
+                <Text style={{fontSize: 18, padding: 10, lineHeight: 25}}>
+                  {item.description}
+                </Text>
+                <Text style={{fontSize: 18, padding: 10, lineHeight: 25}}>
+                  {item.desc2}
+                </Text>
+                <Text style={{fontSize: 18, padding: 10, lineHeight: 25}}>
+                  {item.desc3}
+                </Text>
+                <Text style={{fontStyle:'italic', fontSize: 18, padding: 10, lineHeight: 25}}>
+                  {item.desc4}
+                </Text>
+              </View>
             </View>
           </View>
         ))}
