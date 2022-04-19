@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   Animated,
 } from 'react-native';
-import {isIphoneX} from 'react-native-iphone-x-helper';
+//import {isIphoneX} from 'react-native-iphone-x-helper';
 import {icons, COLORS, SIZES, FONTS} from '../constants';
 
 const StudentInfo = ({route, navigation}) => {
@@ -25,8 +25,8 @@ const StudentInfo = ({route, navigation}) => {
       <View style={{flexDirection: 'row'}}>
         <TouchableOpacity
           style={{
-            width: 60,
-            paddingLeft: 20,
+            width: 50,
+            paddingLeft: 30,
             justifyContent: 'center',
           }}
           onPress={() => navigation.goBack()}>
@@ -34,8 +34,45 @@ const StudentInfo = ({route, navigation}) => {
             source={icons.back}
             resizeMode="contain"
             style={{
-              width: 40,
-              height: 40,
+              width: 30,
+              height: 30,
+            }}
+          />
+        </TouchableOpacity>
+
+        <View
+          style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+              paddingTop: 10
+          }}>
+          <View
+            style={{
+              height: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingHorizontal: SIZES.padding * 3,
+              borderRadius: SIZES.radius,
+
+
+            }}>
+            <Text style={{fontWeight: 'bold', fontSize: 20}}>{students?.name}</Text>
+          </View>
+        </View>
+
+        <TouchableOpacity
+          style={{
+            width: 50,
+            paddingRight: 30,
+            justifyContent: 'center',
+          }}>
+          <Image
+            source={icons.list}
+            resizeMode="contain"
+            style={{
+              width: 30,
+              height: 30,
             }}
           />
         </TouchableOpacity>
@@ -49,7 +86,7 @@ const StudentInfo = ({route, navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.secondary,
+    backgroundColor: COLORS.white,
   },
 });
 
