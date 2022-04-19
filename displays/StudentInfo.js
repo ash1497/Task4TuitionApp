@@ -14,8 +14,10 @@ import {icons, COLORS, SIZES, FONTS} from '../constants';
 const StudentInfo = ({route, navigation}) => {
   const [students, setStudents] = React.useState(null);
   const [currentLocation, setCurrentLocation] = React.useState(null);
+  const [student, setStudent] = React.useState(null);
   React.useEffect(() => {
     let {item, currentLocation} = route.params;
+    setStudent(item);
     setStudents(item);
     setCurrentLocation(currentLocation);
   }, [route.params]);
@@ -45,42 +47,69 @@ const StudentInfo = ({route, navigation}) => {
             flex: 1,
             alignItems: 'center',
             justifyContent: 'center',
-              paddingTop: 10
+            paddingTop: 5,
+            paddingRight: 40,
           }}>
           <View
             style={{
               height: 50,
               alignItems: 'center',
               justifyContent: 'center',
-              paddingHorizontal: SIZES.padding * 3,
-              borderRadius: SIZES.radius,
-
-
+              paddingHorizontal: 30,
             }}>
-            <Text style={{fontWeight: 'bold', fontSize: 20}}>{students?.name}</Text>
+            <Text style={{fontWeight: 'bold', fontSize: 20}}>
+              {students?.name}
+            </Text>
           </View>
         </View>
-
-        <TouchableOpacity
-          style={{
-            width: 50,
-            paddingRight: 30,
-            justifyContent: 'center',
-          }}>
-          <Image
-            source={icons.list}
-            resizeMode="contain"
-            style={{
-              width: 30,
-              height: 30,
-            }}
-          />
-        </TouchableOpacity>
       </View>
     );
   }
 
-  return <SafeAreaView style={styles.container}>{renderHeader()}</SafeAreaView>;
+  function renderStudentInfo() {
+    return (
+      <Animated.ScrollView
+        horizontal
+        pagingEnabled
+        scrollEventThrottle={16}
+        snapToAlignment="center">
+        {student?.task.map((item, index) => (
+          <View key={`task-${index}`} style={{alignItems: 'center'}}>
+            <View style={{height: SIZES.height * 0.35}}>
+              <Image
+                source={item.photo}
+                resizeMode="cover"
+                style={{
+                  width: SIZES.width,
+                  height: '100%',
+                }}
+              />
+            </View>
+            <View
+              style={{
+                width: SIZES.width,
+                alignItems: 'center',
+                marginTop: 15,
+                paddingHorizontal: SIZES.padding * 2,
+              }}>
+              <Text
+                style={{marginVertical: 10, textAlign: 'center', ...FONTS.h2}}>
+                {item.name} - {item.price.toFixed(2)}
+              </Text>
+              <Text style={{...FONTS.body3}}>{item.description}</Text>
+            </View>
+          </View>
+        ))}
+      </Animated.ScrollView>
+    );
+  }
+
+  return (
+    <SafeAreaView style={styles.container}>
+      {renderHeader()}
+      {renderStudentInfo()}
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({
