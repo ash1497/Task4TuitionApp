@@ -42,7 +42,6 @@ const StudentInfo = ({route, navigation}) => {
             }}
           />
         </TouchableOpacity>
-
         <View
           style={{
             flex: 1,

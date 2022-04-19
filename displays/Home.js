@@ -282,7 +282,10 @@ const Home = ({navigation}) => {
             width: 50,
             paddingRight: SIZES.padding * 2,
             justifyContent: 'center',
-          }}>
+          }}
+          onPress={() =>
+              navigation.navigate('Location')
+          }>
           <Image
             source={icons.nearby}
             resizeMode="contain"

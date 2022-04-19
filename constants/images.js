@@ -7,6 +7,7 @@ export const avatar6 = require('../assets/images/avatar6.png');
 export const avatar7 = require('../assets/images/avatar7.png');
 export const carwash = require('../assets/images/carwash.jpg');
 export const gardening = require('../assets/images/gardening.jpg');
+export const googlemap = require('../assets/images/googlemap.jpg');
 export const lawnmow = require('../assets/images/lawnmow.jpg');
 export const misc = require('../assets/images/miscwork.png');
 export const snowshovel = require('../assets/images/snowshoveling.jpg');
@@ -25,6 +26,7 @@ export default {
   avatar7,
   carwash,
   gardening,
+  googlemap,
   lawnmow,
   misc,
   snowshovel,
