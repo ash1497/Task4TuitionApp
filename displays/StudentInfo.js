@@ -9,7 +9,6 @@ import {
   Animated,
   Button,
 } from 'react-native';
-//import {isIphoneX} from 'react-native-iphone-x-helper';
 import {icons, COLORS, SIZES, FONTS} from '../constants';
 
 const StudentInfo = ({route, navigation}) => {
@@ -135,7 +134,7 @@ const StudentInfo = ({route, navigation}) => {
           marginLeft: '25%',
         }}>
         <Button
-          //onPress={onPressLearnMore}
+            onPress={() => navigation.navigate('Payment')}
           title="Book an appointment"
           color={COLORS.primary}
         />

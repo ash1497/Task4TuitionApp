@@ -53,24 +53,6 @@ const Tabs = () => {
           ),
         }}
       />
-      <Tab.Screen
-        name="User"
-        component={Home}
-        options={{
-          header: () => null,
-          tabBarIcon: ({focused}) => (
-            <Image
-              source={icons.user}
-              resizeMode="contain"
-              style={{
-                width: 30,
-                height: 30,
-                tintColor: focused ? COLORS.primary : COLORS.secondary,
-              }}
-            />
-          ),
-        }}
-      />
     </Tab.Navigator>
   );
 };
