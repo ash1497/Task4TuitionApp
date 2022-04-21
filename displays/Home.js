@@ -248,13 +248,14 @@ const Home = ({navigation}) => {
             width: 50,
             paddingLeft: SIZES.padding * 2,
             justifyContent: 'center',
-          }}>
+          }}
+          onPress={() => navigation.navigate('Payment')}>
           <Image
             source={icons.creditcard}
             resizeMode="contain"
             style={{
-              width: 30,
-              height: 30,
+              width: 40,
+              height: 40,
             }}
           />
         </TouchableOpacity>
@@ -283,15 +284,13 @@ const Home = ({navigation}) => {
             paddingRight: SIZES.padding * 2,
             justifyContent: 'center',
           }}
-          onPress={() =>
-              navigation.navigate('Location')
-          }>
+          onPress={() => navigation.navigate('Location')}>
           <Image
-            source={icons.nearby}
+            source={icons.homelocation}
             resizeMode="contain"
             style={{
-              width: 30,
-              height: 30,
+              width: 40,
+              height: 40,
             }}
           />
         </TouchableOpacity>
@@ -336,7 +335,7 @@ const Home = ({navigation}) => {
               marginTop: SIZES.padding,
               color:
                 selectedCategory?.id == item.id ? COLORS.white : COLORS.black,
-              ...FONTS.body5, fontWeight: 'bold'
+              fontWeight: 'bold',
             }}>
             {item.short}
           </Text>
