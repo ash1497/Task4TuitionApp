@@ -336,7 +336,7 @@ const Home = ({navigation}) => {
               marginTop: SIZES.padding,
               color:
                 selectedCategory?.id == item.id ? COLORS.white : COLORS.black,
-              ...FONTS.body5,
+              ...FONTS.body5, fontWeight: 'bold'
             }}>
             {item.short}
           </Text>

@@ -1,3 +1,4 @@
+export const add = require ('../assets/icons/add.png')
 export const amex = require('../assets/icons/amex.png');
 export const back = require('../assets/icons/back.png');
 export const car = require('../assets/icons/car.png');
@@ -14,6 +15,7 @@ export const mastercard = require('../assets/icons/mastercard.png');
 export const misc = require('../assets/icons/misc.png');
 export const nearby = require('../assets/icons/nearby.png');
 export const pin = require('../assets/icons/pin.png');
+export const refresh = require('../assets/icons/refresh.png');
 export const search = require('../assets/icons/search.png');
 export const shoppingcart = require('../assets/icons/shoppingcart.png');
 export const snowshovel = require('../assets/icons/snowshovel.png');
@@ -22,6 +24,7 @@ export const user = require('../assets/icons/user.png');
 export const visa = require('../assets/icons/visa.png');
 
 export default {
+  add,
   amex,
   back,
   car,
@@ -38,6 +41,7 @@ export default {
   misc,
   nearby,
   pin,
+  refresh,
   search,
   shoppingcart,
   snowshovel,

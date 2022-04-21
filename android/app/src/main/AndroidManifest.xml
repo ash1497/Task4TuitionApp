@@ -23,8 +23,8 @@
       </activity>
         <!-- You will only need to add this meta-data tag, but make sure it's a child of application -->
         <meta-data
-                android:name="com.google.android.geo.API_KEY"
-                android:value="AIzaSyBcGmwW3qb_UBamNlF5KIicAI7McWbSh14"/>
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="AIzaSyB8D-5BVnnPrsRidPxOcKQ-3kTW1tvPQFc"/>
 
         <!-- You will also only need to add this uses-library tag -->
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>

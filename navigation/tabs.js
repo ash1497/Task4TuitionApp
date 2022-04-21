@@ -6,6 +6,8 @@ import {
   BottomTabBar,
 } from '@react-navigation/bottom-tabs';
 import {Home} from '../displays';
+import {AddStudent} from '../displays'
+
 import {COLORS, icons} from '../constants';
 const Tab = createBottomTabNavigator();
 const Tabs = () => {
@@ -16,13 +18,13 @@ const Tabs = () => {
         headerShown: false,
       }}>
       <Tab.Screen
-        name="Favorite"
+        name="Home"
         component={Home}
         options={{
           header: () => null,
           tabBarIcon: ({focused}) => (
             <Image
-              source={icons.pin}
+              source={icons.home}
               resizeMode="contain"
               style={{
                 width: 30,
@@ -34,13 +36,13 @@ const Tabs = () => {
         }}
       />
       <Tab.Screen
-        name="Search"
-        component={Home}
+        name="Add"
+        component={AddStudent}
         options={{
           header: () => null,
           tabBarIcon: ({focused}) => (
             <Image
-              source={icons.search}
+              source={icons.add}
               resizeMode="contain"
               style={{
                 width: 30,
